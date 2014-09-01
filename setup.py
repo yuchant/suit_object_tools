@@ -1,5 +1,5 @@
 from distutils.core import setup
-
+# from setuptools import find_packages
 
 setup(
     name="suit_object_tools",
@@ -12,12 +12,12 @@ setup(
     packages=[
         "suit_object_tools",
     ],
-    package_dir={"suit_object_tools": "suit_object_tools"},
+    include_package_data=True,
     classifiers=[
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Framework :: Django",
-    ]
+    ],
 )
