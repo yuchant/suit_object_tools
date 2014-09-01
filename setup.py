@@ -12,7 +12,12 @@ setup(
     packages=[
         "suit_object_tools",
     ],
-    include_package_data=True,
+    # data_files=[('', '*.html')],
+    package_data={
+        'suit_object_tools': [
+            'templates/admin/*.html',
+        ],
+    },
     classifiers=[
         "Environment :: Web Environment",
         "Intended Audience :: Developers",

@@ -37,7 +37,7 @@ class SuitObjectActionsMixin(object):
     def view_wrapper(self, func):
         """ Wrap the user supplied view to accept object PK and pass the object itself to the view function.
         If the response is an HttpResponse, allow the view to return a response.
-        Otherwise, redirct back to the object page with a success message.
+        Otherwise, redirect back to the object page with a success message.
         """
         @functools.wraps(func)
         def wrapped_function(request, obj_pk):
