@@ -1,10 +1,13 @@
 Django Suit Object Tools
 ------------------------
 
+	Note: this is not an official django suit package. This is just an extremely light weight addition consisting of < 100 lines.
+
 Django suit provides a sidebar with "object tools" such as "Add another <object>" - this is a perfect opportunity to add what django has long been missing: per-object actions.
 
 ![Object Tools.gif](object_tools.gif)
 
+How did we come this far without this?
 
 
 ## Installation
