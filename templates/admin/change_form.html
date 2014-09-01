@@ -1,0 +1,22 @@
+{% extends "../../suit/templates/admin/change_form.html" %}
+{# this is an inheritance hack that prevents recursion by absolutely matching only django-suit's provided change_form.html #}
+{# the alternative is to copy the suit source code into this template #}
+
+{% block object-tools %}
+	{{ block.super }}
+	{% if adminform and adminform.model_admin.suit_object_actions %}
+		<h4 class="italic-title" style="margin-top: 20px">
+			Object Actions
+		</h4>
+		<ul class="box menu-box">
+			{% for action in adminform.model_admin.get_suit_object_actions %}
+				<li>
+					<a href="{{ action.action_string }}/">
+						<i class="{% if action.icon_class %}{{ action.icon_class }}{% else %}icon-wrench icon-alpha75{% endif %}"></i>
+						{{ action.name }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+ {% endblock %}
