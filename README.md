@@ -30,17 +30,19 @@ Django suit provides a sidebar with "object tools" such as "Add another <object>
 
 ## Full Example
 
-	from suit_object_tools.admin import SuitObjectActionsMixin
+```python
+from suit_object_tools.admin import SuitObjectActionsMixin
 
 
-	class MyAdmin(SuitObjectActionsMixin, admin.ModelAdmin):
-	    suit_object_actions = [
-	        '_object_action',
-	    ]
+class MyAdmin(SuitObjectActionsMixin, admin.ModelAdmin):
+    suit_object_actions = [
+        '_object_action',
+    ]
 
-	    def _object_action(self, request, obj):
-	    	obj.do_something()
-	    	self.message_user(reqest, 'Did something')
+    def _object_action(self, request, obj):
+    	obj.do_something()
+    	self.message_user(reqest, 'Did something')
 
-	    _object_action.short_description = 'Do Something'
-	    _object_action.icon_class = 'icon-cog icon-alpha75'
+    _object_action.short_description = 'Do Something'
+    _object_action.icon_class = 'icon-cog icon-alpha75'
+```
