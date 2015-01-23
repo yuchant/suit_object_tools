@@ -5,6 +5,8 @@ Django Suit Object Tools
 
 Django suit provides a sidebar with "object tools" such as "Add another <object>" - this is a perfect opportunity to add what django has long been missing: per-object actions.
 
+Most importantly, replicating the pattern familiar by heart to any django developer: django admin actions.
+
 ![Object Tools.gif](object_tools.gif)
 
 How did we come this far without this?
