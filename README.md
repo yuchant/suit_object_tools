@@ -42,15 +42,15 @@ from suit_object_tools.admin import SuitObjectActionsMixin
 class MyAdmin(SuitObjectActionsMixin, admin.ModelAdmin):
     suit_object_actions_title = 'Custom Actions Title'
     suit_object_actions = [
-        '_object_action',
+        'object_action',
     ]
 
-    def _object_action(self, request, obj):
+    def object_action(self, request, obj):
         obj.do_something()
         self.message_user(request, 'Did something')
 
-    _object_action.short_description = 'Do Something'
-    _object_action.icon_class = 'icon-cog icon-alpha75'
+    object_action.short_description = 'Do Something'
+    object_action.icon_class = 'icon-cog icon-alpha75'
 ```
 
 
