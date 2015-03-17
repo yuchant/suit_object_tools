@@ -47,7 +47,7 @@ class MyAdmin(SuitObjectActionsMixin, admin.ModelAdmin):
 
     def _object_action(self, request, obj):
         obj.do_something()
-        self.message_user(reqest, 'Did something')
+        self.message_user(request, 'Did something')
 
     _object_action.short_description = 'Do Something'
     _object_action.icon_class = 'icon-cog icon-alpha75'
